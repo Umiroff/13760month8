@@ -1,0 +1,43 @@
+.cat{
+    width: 100%;
+    height: 665px;
+    padding-top: 50px;
+
+    &__title{
+        width: 100%;
+        height: 90px;
+        display: flex;
+        gap: 910px;
+
+        p{
+            font-size: 40px;
+        }
+        button{
+            width: 220px;
+            height: 50px;
+            border-radius: 50px;
+            border: 1px solid rgba(69, 69, 69, 1);
+            color: rgba(69, 69, 69, 1);
+            background: fixed;
+            cursor: pointer;
+        }
+    }
+
+    &__cats{
+        width: 100%;
+        height: 615px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+
+        &__1{
+            width: 420px;
+            height: 250px;
+            border-radius: 20px;
+            display: flex;
+            gap: 70px;
+            background: rgba(242, 242, 242, 1);
+            padding: 20px;
+        }
+    }
+}
