@@ -1,13 +1,13 @@
-.cat{
+.why{
     width: 100%;
-    height: 715px;
+    height: 500px;
     padding-top: 50px;
 
     &__title{
         width: 100%;
         height: 90px;
         display: flex;
-        gap: 910px;
+        gap: 750px;
 
         p{
             font-size: 40px;
@@ -23,21 +23,28 @@
         }
     }
 
-    &__cats{
+    &__parts{
         width: 100%;
-        height: 615px;
+        height: 360px;
         display: flex;
         flex-wrap: wrap;
-        gap:35px;
+        gap: 20px;
 
         &__1{
-            width: 410px;
-            height: 250px;
-            border-radius: 20px;
-            display: flex;
-            gap: 70px;
-            background: rgba(242, 242, 242, 1);
+            width: 310px;
+            height: 360px;
             padding: 30px;
+            border: 1px solid rgba(217, 217, 217, 1);
+
+            &__title{
+                font-size: 20px;
+                font-weight: 600;
+                color: rgba(69, 69, 69, 1);
+            }
+            &__text{
+                font-size: 16px;
+                color: rgba(69, 69, 69, 1);
+            }
         }
     }
 }
