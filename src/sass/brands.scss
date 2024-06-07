@@ -1,0 +1,35 @@
+.brands{
+    width: 100%;
+    padding-top: 50px;
+
+    &__title{
+        width: 100%;
+        height: 90px;
+        display: flex;
+        gap: 850px;
+
+        p{
+            font-size: 40px;
+        }
+        div{
+            display: flex;
+            gap: 10px;
+            padding-top: 20px;
+            button{
+                width: 39px;
+                height: 26px;
+                border-radius: 50px;
+                border: 1px solid rgba(69, 69, 69, 1);
+                color: rgba(69, 69, 69, 1);
+                background: fixed;
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__logos{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+}

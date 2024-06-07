@@ -11,7 +11,7 @@ function Whynornlight() {
     <>
     <div className='why'>
         <div className='why__title'>
-            <p>Why NORNLIGHT?</p>
+            <h2>Why NORNLIGHT?</h2>
             <button>About company <img src={vec} alt="" /></button>
         </div>
         <div className='why__parts'>

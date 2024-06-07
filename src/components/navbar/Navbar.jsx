@@ -22,7 +22,7 @@ function Navbar() {
                     <p>Blog</p>
                 </div>
                 <div className='nav__top__call'>
-                    <p>8 (800) 890-46-56</p>
+                    <strong>8 (800) 890-46-56</strong>
                     <p>Request call</p>
                 </div>
             </div>
