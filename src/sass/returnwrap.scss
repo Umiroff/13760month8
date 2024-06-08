@@ -1,0 +1,40 @@
+.return{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 100px;
+    padding: 50px 0px 50px;
+
+    &__info{
+        width: 530px;
+        row-gap: 30px;
+        position: relative;
+
+        &__title{
+            position: sticky;
+            top: 0px;
+            font-size: 64px;
+            font-weight: 600;
+            color: rgba(69, 69, 69, 1);
+        }
+    }
+    &__text{
+        width: 640px;
+        font-size: 20px;
+        color: rgba(69, 69, 69, 1);
+
+        strong{
+            font-size: 24px;
+        }
+        p{
+            font-size: 20px;
+        }
+        ul{
+            padding-left: 40px;
+            color: rgb(139, 109, 196);
+        }
+        a{
+            color: rgb(139, 109, 196);
+        }
+    }
+}
