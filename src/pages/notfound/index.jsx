@@ -1,8 +1,13 @@
 import React from 'react'
+import Navbar from '../../components/navbar/Navbar'
 
 function Notfound() {
   return (
-    <div>index</div>
+    <>
+    <div>
+      <Navbar/>
+    </div>
+    </>
   )
 }
 

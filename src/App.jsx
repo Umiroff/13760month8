@@ -8,6 +8,8 @@ import Contact from "./pages/contact"
 import Blog from "./pages/blog"
 import Basket from "./pages/basket"
 import Favourites from "./pages/favourites"
+import Allproducts from "./pages/allproducts"
+import Navbar from "./components/navbar/Navbar"
 
 
 function App() {
@@ -16,6 +18,7 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<Home/>}/>
+        <Route path="/products" element={<Allproducts/>}/>
         <Route path="/about" element={<About/>}/>
         <Route path="/shipping" element={<Shipping/>}/>
         <Route path="/return" element={<Return/>}/>

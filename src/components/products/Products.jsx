@@ -4,6 +4,7 @@ import vec from '../../assets/catvec.svg'
 import proImg from '../../assets/proImg.svg'
 import { FaRegHeart } from "react-icons/fa";
 import { IoCartOutline  } from "react-icons/io5";
+import { Link } from 'react-router-dom';
 
 function Products({proTitle, data}) {
     
@@ -26,7 +27,9 @@ function Products({proTitle, data}) {
     <div className='pro'>
         <div className='pro__title'>
             <p>{proTitle}</p>
-            <button>All products <img src={vec} alt="" /></button>
+            <Link to={'/products'}>
+                <button>All products <img src={vec} alt="" /></button>
+            </Link>
         </div>
         <div className='pro__bar'>
             <p>All</p>

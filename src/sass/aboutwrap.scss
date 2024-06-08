@@ -1,0 +1,44 @@
+.about{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 100px;
+    padding: 50px 0px 50px;
+
+    &__info{
+        width: 530px;
+        display: grid;
+        align-items: center;
+        row-gap: 30px;
+
+        &__title{
+            font-size: 64px;
+            font-weight: 600;
+            color: rgba(69, 69, 69, 1);
+        }
+
+        div{
+            width: 530px;
+            height: 250px;
+            border-radius: 15px;
+            background: rgba(242, 242, 242, 1);
+            padding-left: 40px;
+            display: grid;
+            align-items: center;
+            color: rgba(69, 69, 69, 1);
+
+            strong{
+                font-size: 64px;
+            }
+            p{
+                font-size: 24px;
+            }
+        }
+    }
+    &__text{
+        width: 540px;
+        padding-top: 50px;
+        font-size: 20px;
+        color: rgba(69, 69, 69, 1);
+    }
+}
