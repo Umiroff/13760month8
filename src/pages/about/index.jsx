@@ -6,7 +6,7 @@ import Brands from '../../components/brands/Brands'
 import Blogwrap from '../../components/blogwrap/Blogwrap'
 
 function About() {
-  const blogData = [1]
+  const blogData = [1,2,3]
   return (
     <>
     <div>

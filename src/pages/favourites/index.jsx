@@ -3,6 +3,7 @@ import Navbar from '../../components/navbar/Navbar'
 import Footer from '../../components/footer/Footer'
 import Products from '../../components/products/Products'
 import { useSelector } from 'react-redux'
+import Empty from '../../components/empty/Empty'
 
 function Favourites() {
   const wishes = useSelector(state => state.wishlist.value)
@@ -10,7 +11,12 @@ function Favourites() {
     <>
     <div>
       <Navbar/>
-      <Products data={wishes} proTitle={"Favorites"}/>
+      {
+        wishes.length ? 
+        <Products data={wishes} proTitle={"Favorites"}/>
+        :
+        <Empty/>
+      }
       <Footer/>
     </div>
     </>
