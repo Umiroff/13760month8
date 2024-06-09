@@ -9,7 +9,7 @@ import Blog from "./pages/blog"
 import Basket from "./pages/basket"
 import Favourites from "./pages/favourites"
 import Allproducts from "./pages/allproducts"
-import Navbar from "./components/navbar/Navbar"
+import Admin from "./pages/admin"
 
 
 function App() {
@@ -27,6 +27,7 @@ function App() {
         <Route path="/blog" element={<Blog/>}/>
         <Route path="/basket" element={<Basket/>}/>
         <Route path="/favourites" element={<Favourites/>}/>
+        <Route path="/admin" element={<Admin/>}/>
       </Routes>
     </>
   )

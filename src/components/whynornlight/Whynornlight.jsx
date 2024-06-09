@@ -5,6 +5,7 @@ import whyBrand from '../../assets/whyBrands.svg'
 import whyPrice from '../../assets/whyPrice.svg'
 import whyDel from '../../assets/whyDel.svg'
 import whyBig from '../../assets/whyBig.svg'
+import { Link } from 'react-router-dom'
 
 function Whynornlight() {
   return (
@@ -12,7 +13,9 @@ function Whynornlight() {
     <div className='why'>
         <div className='why__title'>
             <h2>Why NORNLIGHT?</h2>
+            <Link to={'/about'}>
             <button>About company <img src={vec} alt="" /></button>
+            </Link>
         </div>
         <div className='why__parts'>
             <div className='why__parts__1'>

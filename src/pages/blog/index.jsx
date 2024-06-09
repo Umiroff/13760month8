@@ -4,7 +4,7 @@ import Blogwrap from '../../components/blogwrap/Blogwrap'
 import Footer from '../../components/footer/Footer'
 
 function Blog() {
-  const blogData = [1,2]
+  const blogData = [1,2,3,4,5,6]
   return (
     <>
     <div>

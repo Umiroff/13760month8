@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Navbar from '../../components/navbar/Navbar'
 import Hero from '../../components/hero/Hero'
 import Category from '../../components/category/Category'
@@ -8,11 +8,18 @@ import Brands from '../../components/brands/Brands'
 import Blogwrap from '../../components/blogwrap/Blogwrap'
 import Production from '../../components/production/Production'
 import Footer from '../../components/footer/Footer'
+import { useGetProductQuery } from '../../context/productApi'
 
 function Home() {
   const proTitle = "Popular products"
-  const data = [1,2,3,4,5,6,7,8]
-  const blogData = [1]
+  const blogData = [1,2,3]
+  let {data} = useGetProductQuery()
+  const loadName = 'cards_loader'
+
+  const handleLoadMore = (e) => {
+    e.preventDefault()
+    setlimit(limit+8)
+  }
   return (
     <>
     <div className='home'>
@@ -20,7 +27,7 @@ function Home() {
       <Hero/>
       <Category/>
       <Whynornlight/>
-      <Products proTitle={proTitle} data={data}/>
+      <Products proTitle={proTitle} data={data} loadName={loadName}/>
       <Brands/>
       <Blogwrap blogData={blogData}/>
       <Production/>

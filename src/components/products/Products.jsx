@@ -2,24 +2,40 @@ import React from 'react'
 import '../../sass/products.scss'
 import vec from '../../assets/catvec.svg'
 import proImg from '../../assets/proImg.svg'
-import { FaRegHeart } from "react-icons/fa";
+import { FaHeart, FaRegHeart } from "react-icons/fa";
 import { IoCartOutline  } from "react-icons/io5";
 import { Link } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { toggleToWishes } from '../../context/wishlistSlice';
+import { useGetProductQuery } from '../../context/productApi';
+import { addToCart } from '../../context/cartSlice';
 
-function Products({proTitle, data}) {
+function Products({proTitle, data,loadName}) {
+    let {isLoading} = useGetProductQuery()
+    const i = useSelector(reducer => reducer.wishlist.value)
+    const dispatch = useDispatch()
     
-
-    let item = data?.map(el => (
-        <div className='pro__pros__1'>
+    
+    let item = data?.map((el) => (
+        <div className='pro__pros__1' key={el.id}>
+            <Link to={`/product/${el.id}`}>
             <img src={proImg} alt="" />
-            <p>Recessed lamp Novotech</p>
+            </Link>
+            <p>{el.title}</p>
             <div>
-                <s style={{color: 'rgba(159, 159, 159, 1)', fontSize: 12}}>7000$</s>
+                <s style={{color: 'rgba(159, 159, 159, 1)', fontSize: 12}}>{el.price+100}$</s>
                 <br />
-                <strong>6399$</strong>
+                <strong>{el.price}$</strong>
             </div>
-            <button className='pro__pros__1__cartbtn' ><IoCartOutline style={{width:20,height:20}}/></button>
-            <button className='pro__pros__1__likebtn'><FaRegHeart style={{width:20,height:20}}/></button>
+            <button className='pro__pros__1__cartbtn' ><IoCartOutline style={{width:20,height:20}} onClick={() => dispatch(addToCart(el))}/></button>
+            <button className='pro__pros__1__likebtn' onClick={() => dispatch(toggleToWishes(el))}>
+                {
+
+                    i.some(l => l.id === el.id) ? 
+                    <FaHeart className='like_icon' style={{width:20,height:20}}/>
+                    : <FaRegHeart className='like_icon' style={{width:20,height:20}}/>
+                }
+            </button>
         </div>
     ))
   return (
@@ -42,6 +58,7 @@ function Products({proTitle, data}) {
             <p>Furniture installations</p>
         </div>
         <div className='pro__pros'>
+            {isLoading ? <div className={`${loadName}`}></div> : <></>}
             {item}
         </div>
     </div>
