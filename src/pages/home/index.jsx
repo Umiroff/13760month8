@@ -18,6 +18,7 @@ function Home() {
   return (
     <>
     <div className='home'>
+      
       <Navbar data={data}/>
       <Hero/>
       <Category/>

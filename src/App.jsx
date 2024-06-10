@@ -19,6 +19,7 @@ function App() {
 
   return (
     <>
+    <p className="explain">Assalomu aleykum vercel yaxshi ishlamay qolyapti <br />shuning uchun manabu github linkdan olibtekshirsangiz yaxshiroq bolardi: <br />https://github.com/Umiroff/13760month8.git</p>
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="*" element={<Notfound/>}/>
