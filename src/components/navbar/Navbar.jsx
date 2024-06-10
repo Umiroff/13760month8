@@ -38,6 +38,9 @@ function Navbar({data}) {
                     <Link className='link' to={'/blog'}>
                     <p>Blog</p>
                     </Link>
+                    <Link className='link' to={'/login'}>
+                    <p>Login</p>
+                    </Link>
                 </div>
                 <div className='nav__top__call'>
                     <strong>8 (800) 890-46-56</strong>

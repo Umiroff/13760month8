@@ -15,11 +15,6 @@ function Home() {
   const blogData = [1,2,3]
   let {data} = useGetProductQuery()
   const loadName = 'cards_loader'
-
-  const handleLoadMore = (e) => {
-    e.preventDefault()
-    setlimit(limit+8)
-  }
   return (
     <>
     <div className='home'>
