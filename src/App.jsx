@@ -11,6 +11,8 @@ import Favourites from "./pages/favourites"
 import Allproducts from "./pages/allproducts"
 import Admin from "./pages/admin"
 import Notfound from "./pages/notfound"
+import Login from "./pages/login"
+import Auth from "./pages/auth/Auth"
 
 
 function App() {
@@ -29,7 +31,10 @@ function App() {
         <Route path="/blog" element={<Blog/>}/>
         <Route path="/basket" element={<Basket/>}/>
         <Route path="/favourites" element={<Favourites/>}/>
-        <Route path="/admin" element={<Admin/>}/>
+        <Route path="/login" element={<Login/>}/>
+        <Route path='/' element={<Auth/>}>
+          <Route path='/admin' element={<Admin/>}/>
+        </Route>
       </Routes>
     </>
   )
