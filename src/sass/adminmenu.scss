@@ -1,0 +1,57 @@
+.adm{
+    width: 100%;
+    height: 1080px;
+    display: flex;
+    &__bar{
+        width: 400px;
+        height: 1080px;
+        background: rgba(69, 69, 69, 1);
+        color: white;
+        padding: 30px;
+
+        strong{
+            font-size: 36px;
+        }
+        p{
+            font-size: 30px;
+        }
+        button{
+            font-size: 25px;
+            width: 200px;
+            height: 50px;
+            border-radius: 10px;
+            background: fixed;
+            border: 0px;
+            color: white;
+            cursor: pointer;
+        }
+    }
+
+    &__main{
+        width: 900px;
+        height: 1080px;
+        padding: 50px;
+        input{
+            width: 500px;
+            height: 50px;
+            border-radius: 10px;
+        }
+        select{
+            width: 500px;
+            height: 50px;
+            border-radius: 10px;
+        }
+        textarea{
+            width: 500px;
+            height: 150px;
+        }
+        button{
+            width: 200px;
+            height: 50px;
+            border-radius: 10px;
+            background: rgba(69, 69, 69, 1);
+            color: white;
+            cursor: pointer;
+        }
+    }
+}
