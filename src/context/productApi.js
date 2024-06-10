@@ -15,10 +15,19 @@ export const productApi = api.injectEndpoints({
       }),
       providesTags: ["Product"]
     }),
+    createProduct: build.mutation({
+      query: (body)=> ({
+        url: "/",
+        method: "POST",
+        body
+      }),
+      invalidatesTags: ["Product"]
+    }),
   }),
 })
 
 export const {
     useGetProductQuery,
-    useGetProductByIdQuery
+    useGetProductByIdQuery,
+    useCreateProductMutation
 } = productApi

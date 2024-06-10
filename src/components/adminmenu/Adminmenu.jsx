@@ -1,19 +1,28 @@
 import React from 'react'
 import '../../sass/adminmenu.scss'
 import { Link } from 'react-router-dom'
+import { useCreateProductMutation } from '../../context/productApi'
 
 function Adminmenu() {
+    let [createProduct] = useCreateProductMutation()
+
+    const handleCreate = (el) => {
+        createProduct(el)
+    }
   return (
     <>
     <div className='adm'>
         <div className='adm__bar'>
             <strong>Admin Dashboard</strong>
             <br />
-            <br />
+            <br /><br />
             <p>Create product</p>
+            <br />
             <p>Manage product</p>
+            <br />
             <p>Create category</p>
-            <p>Manage category</p><br />
+            <br />
+            <p>Manage category</p><br /><br />
             <Link to={'/'}>
                 <button>Log out</button>
             </Link>
