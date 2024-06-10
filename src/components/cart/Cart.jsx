@@ -122,6 +122,8 @@ function Cart() {
             <div className='cart__pay__buy'>
                 <button onClick={handleOrder}>Buy</button>
                 <p>I agree to the processing of my personal data</p>
+                <br />
+                <p>Bu gurpada mahsulotlar keladi botdan: https://t.me/+q8_yBxd4JbxiNWUy</p>
             </div>
         </div>
     </div>

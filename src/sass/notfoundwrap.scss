@@ -8,10 +8,21 @@
         font-size: 300px;
         font-weight: 700;
         color: rgba(69, 69, 69, 0.1);
+
+        @media (max-width: 370px) {
+            width: 360px;
+            font-size: 200px;
+        }
     }
     &__text{
         font-size: 24px;
         padding-left: 120px;
+
+        @media (max-width: 370px) {
+            width: 360px;
+            font-size: 20px;
+            padding-left: 100px;
+        }
     }
     button{
         width: 220px;
@@ -21,5 +32,9 @@
         color: white;
         border-radius: 100px;
         margin-left: 160px;
+
+        @media (max-width: 370px) {
+            margin-left: 100px;
+        }
     }
 }

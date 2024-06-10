@@ -4,10 +4,20 @@
     display: grid;
     row-gap: 50px;
 
+    @media (max-width: 370px) {
+        width: 360px;
+    }
+
     &__title{
         width: 100%;
         display: flex;
         gap: 900px;
+
+        @media (max-width: 370px) {
+            width: 360px;
+            flex-wrap: wrap;
+            gap: 50px;
+        }
 
         &__1{
             font-size: 40px;
@@ -24,6 +34,11 @@
         justify-content: center;
         padding-top: 350px;
 
+        @media (max-width: 370px) {
+            width: 360px;
+            position: relative;
+        }
+
         &__1{
             width: 80%;
             height: 150px;
@@ -33,6 +48,14 @@
             background-color: rgba(255, 255, 255, 1);
             border-radius: 15px;
             padding-top: 50px;
+
+            @media (max-width: 370px) {
+                width: 360px;
+                position: absolute;
+                top: 30px;
+                flex-wrap: wrap;
+                height: 500px;
+            }
 
             strong{
                 font-size: 24px;
