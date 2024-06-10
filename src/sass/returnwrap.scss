@@ -16,6 +16,10 @@
             font-size: 64px;
             font-weight: 600;
             color: rgba(69, 69, 69, 1);
+
+            @media (max-width: 370px) {
+                font-size: 28px;
+            }
         }
     }
     &__text{

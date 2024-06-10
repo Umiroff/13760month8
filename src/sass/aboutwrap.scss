@@ -5,6 +5,10 @@
     gap: 100px;
     padding: 50px 0px 50px;
 
+    @media (max-width: 370px) {
+        width: 360px;
+    }
+
     &__info{
         width: 530px;
         display: grid;
@@ -15,6 +19,11 @@
             font-size: 64px;
             font-weight: 600;
             color: rgba(69, 69, 69, 1);
+
+            @media (max-width: 370px) {
+                font-size: 28px;
+                left: 10px;
+            }
         }
 
         div{
@@ -26,6 +35,10 @@
             display: grid;
             align-items: center;
             color: rgba(69, 69, 69, 1);
+
+            @media (max-width: 370px) {
+                width: 360px;
+            }
 
             strong{
                 font-size: 64px;

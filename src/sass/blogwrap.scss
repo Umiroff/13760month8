@@ -1,6 +1,12 @@
 .blog{
     width: 100%;
     padding: 50px 0px 50px;
+    
+
+    @media (max-width: 370px) {
+        position: relative;
+        width: 360px;
+    }
 
     &__title{
         width: 100%;
@@ -10,6 +16,12 @@
 
         p{
             font-size: 40px;
+
+            @media (max-width: 370px) {
+                font-size: 28px;
+                position: absolute;
+                left: 10px;
+            }
         }
         button{
             width: 220px;
@@ -19,12 +31,21 @@
             color: rgba(69, 69, 69, 1);
             background: fixed;
             cursor: pointer;
+
+            @media (max-width: 370px) {
+                position: absolute;
+                bottom: 0px;
+            }
         }
     }
     &__cards{
         display: flex;
         gap: 20px;
         flex-wrap: wrap;
+
+        @media (max-width: 370px) {
+            width: 360px;
+        }
 
         &__1{
             width: 420px;
@@ -33,6 +54,10 @@
             justify-content: center;
             align-items: center;
             position: relative;
+
+            @media (max-width: 370px) {
+                width: 360px;
+            }
 
             &__vec{
                 position: absolute;

@@ -5,6 +5,7 @@
 
     @media (max-width: 370px) {
         position: relative;
+        width: 360px;
         height: 750px;
     }
 
@@ -17,6 +18,12 @@
         h2{
             font-size: 40px;
             font-weight: 400;
+
+            @media (max-width: 370px) {
+                font-size: 28px;
+                position: absolute;
+                left: 10px;
+            }
         }
         button{
             width: 220px;
