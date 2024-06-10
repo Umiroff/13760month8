@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import '../../sass/shippay.scss'
 import shipMap from '../../assets/shipMap.svg'
 
@@ -33,4 +33,4 @@ function Shippay() {
   )
 }
 
-export default Shippay
+export default memo(Shippay)

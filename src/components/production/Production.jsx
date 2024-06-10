@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import '../../sass/production.scss'
 
 function Production() {
@@ -12,4 +12,4 @@ function Production() {
   )
 }
 
-export default Production
+export default memo(Production)

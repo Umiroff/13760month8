@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import '../../sass/brands.scss'
 import vec from '../../assets/catvec.svg'
 import brandImg from '../../assets/brandImg.svg'
@@ -27,4 +27,4 @@ function Brands() {
   )
 }
 
-export default Brands
+export default memo(Brands)

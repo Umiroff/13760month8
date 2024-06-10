@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import '../../sass/guarantee.scss'
 
 function Guarantee() {
@@ -28,4 +28,4 @@ function Guarantee() {
   )
 }
 
-export default Guarantee
+export default memo(Guarantee)

@@ -23,7 +23,7 @@ function Home() {
   return (
     <>
     <div className='home'>
-      <Navbar/>
+      <Navbar data={data}/>
       <Hero/>
       <Category/>
       <Whynornlight/>

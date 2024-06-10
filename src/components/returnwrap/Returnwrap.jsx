@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import '../../sass/returnwrap.scss'
 
 function Returnwrap() {
@@ -49,4 +49,4 @@ function Returnwrap() {
   )
 }
 
-export default Returnwrap
+export default memo(Returnwrap)

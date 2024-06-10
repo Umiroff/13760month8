@@ -1,13 +1,21 @@
-import React, { useState } from 'react'
+import React, { memo, useState } from 'react'
 import '../../sass/cart.scss'
 import { useDispatch, useSelector } from 'react-redux';
 import { RiDeleteBinLine } from "react-icons/ri";
-import { incCart,decCart, removeFromCart } from '../../context/cartSlice';
+import { incCart,decCart, removeFromCart, clearCart } from '../../context/cartSlice';
+import { ToastContainer, toast } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
+
 
 const BOT_TOKEN = '6622199888:AAHqsCKSs5d6awvfxhjAqvQmnBy1_kcCPjI'
 const CHAT_ID = '-4108697716'
 
 function Cart() {
+
+    const notify = () => {
+        toast("Fill out info!");
+    }
+
     const carts = useSelector(state => state.cart.value)
     let total = useSelector(state => state.cart.total)
     const dispatch = useDispatch()
@@ -23,30 +31,34 @@ function Cart() {
 
     const handleOrder = (e) => {
         e.preventDefault();
-        let text = ''
-        text += `${username} `
-        text += `wants to buy some things %0A Give call: ${phone} %0A Mail: ${mail} %0A Address: ${address} %0A ${order}  %0A total: ${total} %0A Comment: ${comment}`
-        let url =  `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage?chat_id=${CHAT_ID}&text=${text}`
-
-        
-        let api = new XMLHttpRequest()
-        api.open('GET', url, true)
-        api.onload = function() {
-            if (api.status >= 200 && api.status < 300) {
-              const response = JSON.parse(api.responseText);
-              console.log(response);
-            } else {
-              console.error('Request failed with status:', api.status);
-            }
-          };
-          
-          api.onerror = function() {
-            console.error('Request failed');
-          };
-          
-          api.send();
-          dispatch(clearCart())
-          handleClose()
+        if (username > 0 && phone > 0 && mail > 0 && address > 0) {
+            let text = ''
+            text += `${username} `
+            text += `wants to buy some things %0A Give call: ${phone} %0A Mail: ${mail} %0A Address: ${address} %0A ${order}  %0A total: ${total} %0A Comment: ${comment}`
+            let url =  `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage?chat_id=${CHAT_ID}&text=${text}`
+    
+            
+            let api = new XMLHttpRequest()
+            api.open('GET', url, true)
+            api.onload = function() {
+                if (api.status >= 200 && api.status < 300) {
+                  const response = JSON.parse(api.responseText);
+                  console.log(response);
+                } else {
+                  console.error('Request failed with status:', api.status);
+                }
+              };
+              
+              api.onerror = function() {
+                console.error('Request failed');
+              };
+              
+              api.send();
+              dispatch(clearCart())
+            
+        } else {
+            notify();
+        }
     }
 
     let items = carts?.map((el) => (
@@ -113,8 +125,9 @@ function Cart() {
             </div>
         </div>
     </div>
+    <ToastContainer/>
     </>
   )
 }
 
-export default Cart
+export default memo(Cart)

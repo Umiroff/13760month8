@@ -1,0 +1,54 @@
+.con{
+    width: 100%;
+    padding: 50px 0px 50px;
+    display: grid;
+    row-gap: 50px;
+
+    &__title{
+        width: 100%;
+        display: flex;
+        gap: 900px;
+
+        &__1{
+            font-size: 40px;
+            font-weight: 700;
+        }
+    }
+
+    &__map{
+        width: 100%;
+        height: 550px;
+        background-image: url('../assets/shipMap.svg');
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        padding-top: 350px;
+
+        &__1{
+            width: 80%;
+            height: 150px;
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            background-color: rgba(255, 255, 255, 1);
+            border-radius: 15px;
+            padding-top: 50px;
+
+            strong{
+                font-size: 24px;
+            }
+            p{
+                font-size: 16px;
+            }
+
+            button{
+                width: 220px;
+                height: 50px;
+                cursor: pointer;
+                background: rgba(69, 69, 69, 1);
+                color: white;
+                border-radius: 100px;
+            }
+        }
+    }
+}

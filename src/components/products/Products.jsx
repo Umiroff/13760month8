@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import '../../sass/products.scss'
 import vec from '../../assets/catvec.svg'
 import proImg from '../../assets/proImg.svg'
@@ -66,4 +66,4 @@ function Products({proTitle, data,loadName}) {
   )
 }
 
-export default Products
+export default memo(Products)

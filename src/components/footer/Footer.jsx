@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { memo } from 'react'
 import '../../sass/footer.scss'
 import logo from '../../assets/logo.svg'
 import footerImg from '../../assets/footerImg.svg'
 import footerVec from '../../assets/footerVec.svg'
+import { Link } from 'react-router-dom'
 
 
 function Footer() {
@@ -23,15 +24,27 @@ function Footer() {
         </div>
         <div className='footer__forbuyers'>
             <strong>For buyers</strong>
+            <Link className='link' to={'/about'}>
             <p>About company</p>
+            </Link>
+            <Link className='link' to={'/shipping'}>
             <p>Shipping and payment</p>
+            </Link>
+            <Link className='link' to={'/return'}>
             <p>Return</p>
+            </Link>
+            <Link className='link' to={'/garant'}>
             <p>Guarantee</p>
+            </Link>
+            <Link className='link' to={'/contact'}>
             <p>Contacts</p>
+            </Link>
+            <Link className='link' to={'/blog'}>
             <p>Blog</p>
+            </Link>
         </div>
         <div className='footer__pros'>
-            <strong>For buyers</strong>
+            <strong>Products</strong>
             <div>
                 <p>Chandeliers</p>
                 <p>Lamps</p>
@@ -51,4 +64,4 @@ function Footer() {
   )
 }
 
-export default Footer
+export default memo(Footer)

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import '../../sass/aboutwrap.scss'
 
 function Aboutwrap() {
@@ -28,4 +28,4 @@ function Aboutwrap() {
   )
 }
 
-export default Aboutwrap
+export default memo(Aboutwrap)

@@ -1,0 +1,25 @@
+.notfound{
+    width: 100%;
+    height: 400px;
+    display: grid;
+    justify-content: center;
+
+    &__err{
+        font-size: 300px;
+        font-weight: 700;
+        color: rgba(69, 69, 69, 0.1);
+    }
+    &__text{
+        font-size: 24px;
+        padding-left: 120px;
+    }
+    button{
+        width: 220px;
+        height: 50px;
+        cursor: pointer;
+        background: rgba(69, 69, 69, 1);
+        color: white;
+        border-radius: 100px;
+        margin-left: 160px;
+    }
+}

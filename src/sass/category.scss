@@ -3,6 +3,10 @@
     height: 715px;
     padding-top: 50px;
 
+    @media (max-width: 370px) {
+        position: relative;
+    }
+
     &__title{
         width: 100%;
         height: 90px;
@@ -20,15 +24,24 @@
             color: rgba(69, 69, 69, 1);
             background: fixed;
             cursor: pointer;
+
+            @media (max-width: 370px) {
+                position: absolute;
+                bottom: 50px;
+            }
         }
     }
 
     &__cats{
         width: 100%;
-        height: 615px;
+        height: 400px;
         display: flex;
         flex-wrap: wrap;
         gap:35px;
+
+        @media (max-width: 370px) {
+            width: 360px;
+        }
 
         &__1{
             width: 410px;
@@ -38,6 +51,35 @@
             gap: 70px;
             background: rgba(242, 242, 242, 1);
             padding: 30px;
+            position: relative;
+
+            @media (max-width: 370px) {
+                width: 160px;
+                height: 190px;
+            }
+
+            &__img{
+                @media (max-width: 370px) {
+                    position: absolute;
+                    width: 80px;
+                    height: 80px;
+                    top: 60px;
+                }
+            }
+        }
+        &__2{
+            width: 410px;
+            height: 250px;
+            border-radius: 20px;
+            display: flex;
+            gap: 70px;
+            background: rgba(242, 242, 242, 1);
+            padding: 30px;
+            position: relative;
+
+            @media (max-width: 370px) {
+                display: none;
+            }
         }
     }
 }

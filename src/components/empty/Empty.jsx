@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import '../../sass/empty.scss'
 import { Link } from 'react-router-dom'
 
@@ -12,4 +12,4 @@ function Empty() {
   )
 }
 
-export default Empty
+export default memo(Empty)

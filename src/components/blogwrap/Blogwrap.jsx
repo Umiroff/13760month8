@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import '../../sass/blogwrap.scss'
 import vec from '../../assets/catvec.svg'
 import blogImg1 from '../../assets/blogImg1.svg'
@@ -32,4 +32,4 @@ function Blogwrap({blogData}) {
   )
 }
 
-export default Blogwrap
+export default memo(Blogwrap)

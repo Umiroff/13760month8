@@ -10,6 +10,7 @@ import Basket from "./pages/basket"
 import Favourites from "./pages/favourites"
 import Allproducts from "./pages/allproducts"
 import Admin from "./pages/admin"
+import Notfound from "./pages/notfound"
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<Home/>}/>
+        <Route path="*" element={<Notfound/>}/>
         <Route path="/products" element={<Allproducts/>}/>
         <Route path="/about" element={<About/>}/>
         <Route path="/shipping" element={<Shipping/>}/>

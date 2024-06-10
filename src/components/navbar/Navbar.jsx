@@ -7,9 +7,14 @@ import { TbAntennaBars5 } from "react-icons/tb";
 import { Link } from 'react-router-dom';
 
 
-function Navbar() {
+function Navbar({data}) {
     
     const [cat, setCat] = useState(false)
+    const [svalue, setSvalue] = useState('')
+
+    let handleSearch = () => {
+        return data?.filter(title => title.title.toLowerCase().includes(svalue.toLowerCase().trim()))
+    }
   return (
     <>
         <div className='nav'>
@@ -49,10 +54,24 @@ function Navbar() {
                 <div className='nav__mid__inps'>
                     <button><FaListUl/>Category</button>
                     <form action="">
-                        <input type="text" placeholder='Search for products'/>
-                        <div>
+                        <input type="text" placeholder='Search for products' value={svalue} onChange={(e) => setSvalue(e.target.value)}/>
+                        <div className='nav__mid__inps__btn'>
                             <IoSearchOutline style={{width:25, height: 25,cursor: "pointer"}}/>
                         </div>
+                        {
+                            svalue.trim() ?
+                            <div className='nav__mid__inps__pros'>
+                            {
+                                handleSearch(data)?.map(pro => (
+                                <div key={pro.id}>
+                                <p>{pro.title}</p>
+                                </div>
+                            ))
+                            }
+                            </div>
+                            :
+                            <></>
+                        }
                     </form>
                 </div>
 
@@ -61,7 +80,7 @@ function Navbar() {
                     <button><FaRegHeart style={{width: 22, height:22}}/> Favorites</button>
                     </Link>
                     <Link to={'/about'}>
-                    <button><TbAntennaBars5 style={{width: 25, height:25}}/> Comparison</button>
+                    <button className='nav__mid__btns__comp'><TbAntennaBars5 style={{width: 25, height:25}}/> Comparison</button>
                     </Link>
                     <Link to={'/basket'}>
                     <button><IoCartOutline style={{width: 25, height:25}}/> <br />Cart</button>

@@ -27,7 +27,7 @@ function Category() {
                         <br />
                         <p>From 540$ <img src={vec} alt="" /></p>
                     </div>
-                    <img src={cat1} alt="" />
+                    <img src={cat1} alt="" className='cat__cats__1__img'/>
                 </div>
                 <div className='cat__cats__1'>
                     <div>
@@ -39,7 +39,7 @@ function Category() {
                         <br />
                         <p>From 540$ <img src={vec} alt="" /></p>
                     </div>
-                    <img src={cat2} alt="" />
+                    <img src={cat2} alt="" className='cat__cats__1__img'/>
                 </div>
                 <div className='cat__cats__1'>
                     <div>
@@ -51,7 +51,7 @@ function Category() {
                         <br />
                         <p style={{width:100}}>From 540$ <img src={vec} alt="" /></p>
                     </div>
-                    <img src={cat3} alt="" />
+                    <img src={cat3} alt="" className='cat__cats__1__img'/>
                 </div>
                 <div className='cat__cats__1'>
                     <div>
@@ -63,9 +63,9 @@ function Category() {
                         <br />
                         <p>From 540$ <img src={vec} alt="" /></p>
                     </div>
-                    <img src={cat4} alt="" />
+                    <img src={cat4} alt="" className='cat__cats__1__img'/>
                 </div>
-                <div className='cat__cats__1'>
+                <div className='cat__cats__2'>
                     <div>
                         <p>Desk lamp</p>
                         <br />
@@ -75,9 +75,9 @@ function Category() {
                         <br />
                         <p>From 540$ <img src={vec} alt="" /></p>
                     </div>
-                    <img src={cat5} alt="" />
+                    <img src={cat5} alt="" className='cat__cats__2__img'/>
                 </div>
-                <div className='cat__cats__1'>
+                <div className='cat__cats__2'>
                     <div>
                         <p>Spotlights</p>
                         <br />
@@ -87,7 +87,7 @@ function Category() {
                         <br />
                         <p style={{width:100}}>From 540$ <img src={vec} alt="" /></p>
                     </div>
-                    <img style={{width: 230}} src={cat6} alt="" />
+                    <img style={{width: 230}} src={cat6} alt="" className='cat__cats__2__img'/>
                 </div>
             </div>
         </div>
